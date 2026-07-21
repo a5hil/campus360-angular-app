@@ -23,10 +23,16 @@
     <button ng-click="totalFaculty=totalFaculty+1">Add Faculty</button>
 
     <h2>Student list</h2>
-    <ul>
+    <button ng-click="showStudents = !showStudents">
+        {{ showStudents ? 'Hide Students' : 'Show Students' }}
+    </button>
+    <div ng-if="showDashboard = !showDashboard">
+        <ul ng-hide="showStudents">
         <li ng-repeat="student in students">{{student}}</li>
     </ul>
+    </div>
     
+
 
 </body>
 
