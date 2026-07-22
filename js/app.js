@@ -19,8 +19,9 @@ app.controller('dashboardController', function ($scope) {
 
     $scope.addStudent = function () {
         $scope.totalStudents++;
-        $scope.showStudents = true;
-        $scope.showDashboard = true;
     };
+
+    $scope.fees=25000;
+    $scope.today=new Date();
 
 });
