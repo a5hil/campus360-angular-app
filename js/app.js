@@ -38,6 +38,11 @@ app.controller('dashboardController', function ($scope) {
 
     $scope.allowAdmission = function () {
         $scope.isDisabled = false;
-    }
+    };
+
+    $scope.isReadOnly = true;
+    $scope.toggleReadOnly = function () {
+        $scope.isReadOnly = !$scope.isReadOnly;
+    };
 
 });
