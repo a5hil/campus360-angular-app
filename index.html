@@ -51,6 +51,7 @@
         <li ng-repeat="student in students">{{student}}</li>
       </ul>
     </div>
+    <hr>
 
     <h2>Filter Demo</h2>
     <p>uppercase: {{collegeName | uppercase}}</p>
@@ -58,6 +59,15 @@
     <p>currency: {{fees | currency}}</p>
     <p>date: {{today | date:'dd/MM/yyyy'}}</p>
     <p>number: {{totalStudents | number:2}}</p>
+    <hr>
+
+    <h2>Selected Department</h2>
+    <label>Choose a department:</label>
+    <br><br>
+    <select ng-model="selectedDepartment" ng-options="department for department in departments">
+    </select>
+    <p>Selected Department: {{selectedDepartment}}</p>
+    <hr>
 
   </body>
 </html>
