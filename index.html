@@ -145,12 +145,24 @@
     <h2>Student Registration</h2>
     <form name="studentForm" novalidate>
       <label>Student Name:</label>
-      <input type="text" name="studentName" ng-model="studentNameForm" required />
+      <input type="text" name="studentName" ng-model="studentNameForm" ng-minlength="4" ng-maxlength="20" required />
       <p
         ng-show="studentForm.studentName.$touched && studentForm.studentName.$error.required"
         style="color: red"
       >
         Please enter a valid student name.
+      </p>
+      <p
+        ng-show="studentForm.studentName.$touched && studentForm.studentName.$error.minlength"
+        style="color: red"
+      >
+        Student name must be at least 4 characters long.
+      </p>
+      <p
+        ng-show="studentForm.studentName.$touched && studentForm.studentName.$error.maxlength"
+        style="color: red"
+      >
+        Student name must be no more than 20 characters long.
       </p>
       <br /><br />
       <label>Student Email:</label>
